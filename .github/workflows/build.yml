@@ -14,7 +14,7 @@ jobs:
         curl -vLo http://www.adammil.net/files/133/bbros.zip
         Expand-Archive bbros.zip
         cp bbros/bin/* .
-	rm -Recurse bbros/ 
-	rm bbros.zip
+        rm -Recurse bbros/ 
+        rm bbros.zip
     - name: Compile
       run: masscompile.bat
