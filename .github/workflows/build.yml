@@ -1,0 +1,20 @@
+name: CI
+
+on: [push]
+
+jobs:
+  windows:
+    runs-on: windows-2019
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Prepare
+      working-directory: build
+      run: |
+        curl -vLo http://www.adammil.net/files/133/bbros.zip
+        unzip bbros.zip
+        cp bin/* . && rm -Rf bin/ src/ README.txt
+    - name: Compile
+      working-directory: build
+      run: masscompile.bat
