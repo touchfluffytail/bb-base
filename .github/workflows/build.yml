@@ -10,7 +10,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Prepare
-      working-directory: build 
       run: |
         curl -vLo http://www.adammil.net/files/133/bbros.zip
         unzip bbros.zip
