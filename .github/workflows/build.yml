@@ -12,8 +12,8 @@ jobs:
     - name: Prepare
       run: |
         curl -vLo http://www.adammil.net/files/133/bbros.zip
-        unzip bbros.zip
-        cp bin/* . && rm -Rf bin/ src/ README.txt
+        Expand-Archive bbros.zip
+        cp bbros/bin/* . && rm -Rf bbros/ bbros.zip
     - name: Compile
       working-directory: build
       run: masscompile.bat
