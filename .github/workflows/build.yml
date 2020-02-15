@@ -16,4 +16,4 @@ jobs:
         rm -Recurse bbros/ 
         rm bbros.zip
     - name: Compile
-      run: masscompile.bat
+      run: .\masscompile.bat
