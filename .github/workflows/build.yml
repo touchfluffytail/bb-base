@@ -13,7 +13,7 @@ jobs:
       run: |
         curl -vLo http://www.adammil.net/files/133/bbros.zip
         Expand-Archive bbros.zip
-        cp bbros/bin/* . && rm -Rf bbros/ bbros.zip
+        cp bbros/bin/* .
+	rm -Rf bbros/ bbros.zip
     - name: Compile
-      working-directory: build
       run: masscompile.bat
